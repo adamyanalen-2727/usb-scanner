@@ -1,3 +1,4 @@
-import subprocesses
+import subprocess
 
-subprocesses.run(["modprobe", "-r", "usb-storage"])
+def disable_usb_storage():
+    subprocess.run(["pkexec", "modprobe", "-r", "usb-storage"])
